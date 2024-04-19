@@ -329,6 +329,9 @@ return {
     "inkarkat/vim-ReplaceWithRegister", -- replace with register contents using motion (gr + motion)
   },
   {
+    "hrsh7th/nvim-cmp-lsp",
+  },
+  {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = {
