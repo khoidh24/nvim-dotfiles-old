@@ -68,7 +68,10 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
-
+      vim.keymap.set('n', '?', vim.lsp.buf.hover, {})
+      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+      vim.keymap.set({'n', 'v'}, '<space>ca', vim.lsp.buf.code_action, {})
+      
       -- configure tailwindcss server
       lspconfig.tailwindcss.setup({
         capabilities = capabilities,
